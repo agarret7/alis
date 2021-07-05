@@ -6,10 +6,10 @@ set -e
 ./alis-packages.sh
 
 # create ssh key (will prompt password)
-ssh-keygen -t ed25519 -C "agarrett777@gmail.com" -f $HOME/.ssh/id_ed25519
-echo "PUB KEY: $(cat)"
+ssh-keygen -t ed25519 -C "agarrett777@gmail.com" -f ~/.ssh/id_ed25519
 eval "$(ssh-agent -s)"
 ssh-add ~/.ssh/id_ed25519
+echo "PUB KEY: $(cat ~/.ssh/id_ed25519)"
 echo "Add your key to github and press any key to continue..."
 read
 
