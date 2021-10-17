@@ -9,7 +9,7 @@ set -e
 ssh-keygen -t ed25519 -C "agarrett777@gmail.com" -f ~/.ssh/id_ed25519
 eval "$(ssh-agent -s)"
 ssh-add ~/.ssh/id_ed25519
-echo "PUB KEY: $(cat ~/.ssh/id_ed25519)"
+echo "PUB KEY: $(cat ~/.ssh/id_ed25519.pub)"
 echo "Add your key to github and press any key to continue..."
 read
 
